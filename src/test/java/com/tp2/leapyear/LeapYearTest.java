@@ -8,7 +8,7 @@ class LeapYearTest {
 
     @Test
     void exampleTest(){
-        assertEquals(4, 2 + 1);
+        assertEquals(4, 2 + 2);
     }
 
     @Test
