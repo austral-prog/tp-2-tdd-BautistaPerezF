@@ -5,11 +5,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RomanNumeralsTest {
 
-    // TODO: Replace these lines with your tests
+
     @Test
-    void exampleTest(){
+    void exampleTest() {
         assertEquals(4, 2 + 1);
     }
+    @Test
+    void TestBasicNumbers () {
+        RomanNumerals object = new RomanNumerals();
+        assertEquals("I", object.BasicNumbers(1));
+        assertEquals("V", object.BasicNumbers(5));
+        assertEquals("X", object.BasicNumbers(10));
+    }
+    @Test
+    void TestSubtractionCases(){
+        RomanNumerals object = new RomanNumerals();
+        assertEquals("IV", object.SubtractionCases(4));
+        assertEquals("IX", object.SubtractionCases(9));
+    }
+    @Test
+    void TestComplexNumbers(){
+        RomanNumerals object = new RomanNumerals();
+        assertEquals("XL", object.ComplexNumbers(40));
+        assertEquals("L", object.ComplexNumbers(50));
+        assertEquals("C", object.ComplexNumbers(100));
+        assertEquals("CD", object.ComplexNumbers(400));
+        assertEquals("D", object.ComplexNumbers(500));
+        assertEquals("CM", object.ComplexNumbers(900));
+        assertEquals("M", object.ComplexNumbers(1000));
+        assertEquals("XC", object.ComplexNumbers(90));
+    }
+}
 
 //    Missing tests:
 //
@@ -27,4 +53,3 @@ class RomanNumeralsTest {
 //- Convert 900 to "CM"
 //- Convert 1000 to "M"
 //- Convert complex numbers like 1994 to "MCMXCIV"
-}
