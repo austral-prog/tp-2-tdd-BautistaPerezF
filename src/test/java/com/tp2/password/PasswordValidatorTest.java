@@ -1,5 +1,6 @@
 package com.tp2.password;
 
+import com.tp2.leapyear.LeapYear;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -7,11 +8,42 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class PasswordValidatorTest {
 
-    // TODO: Replace these lines with your tests
     @Test
     void exampleTest(){
         assertEquals(4, 2 + 1);
     }
+
+    @Test
+    void TestCharacters(){
+        PasswordValidator object = new PasswordValidator();
+        boolean Value = object.Characters("hola");
+        assertEquals(false, Value );
+    }
+    @Test
+    void TestContainsUpper(){
+        PasswordValidator object = new PasswordValidator();
+        boolean Value = object.ContainsUpper("P");
+        assertEquals(true, Value );
+    }
+    @Test
+    void TestContainsLower(){
+        PasswordValidator object = new PasswordValidator();
+        boolean Value = object.ContainsLower("p");
+        assertEquals(true, Value );
+    }
+    @Test
+    void TestContainsNumber(){
+        PasswordValidator object = new PasswordValidator();
+        boolean Value = object.ContainsNumber("1");
+        assertEquals(true, Value );
+    }
+    @Test
+    void TestContainsSpecial(){
+        PasswordValidator object = new PasswordValidator();
+        boolean Value = object.ContainsSpecial("@");
+        assertEquals(true, Value );
+    }
+
 
 //    Missing tests:
 //
